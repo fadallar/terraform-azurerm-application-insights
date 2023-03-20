@@ -15,7 +15,7 @@ output "app_insights_app_id" {
 }
 
 output "app_insights_connection_strings" {
-  value       = azurerm_application_insights.this.connection_strings
+  value       = azurerm_application_insights.this.connection_string
   description = "The connection strings for the Application Insights resource."
   sensitive   = true
 }
