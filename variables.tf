@@ -59,19 +59,6 @@ variable "sampling_percentage" {
   }
 }
 
-variable "custom_locations" {
-  type = list(object({
-    location_name     = string
-    retention_in_days = number
-  }))
-  default = []
-
-  validation {
-    condition     = length(var.custom_locations) <= 5
-    error_message = "The number of custom locations must be 5 or less."
-  }
-}
-
 variable "workspace_id" {
   description = "Specifies the id of a log analytics workspace resource. Changing this forces a new resource to be created."
   type        = string
